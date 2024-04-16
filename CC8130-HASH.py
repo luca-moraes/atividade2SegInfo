@@ -23,11 +23,11 @@ def verificar_hashes(arquivo_csv):
 
             hash_sha256_calculado = calcular_hash_sha256(frase)
             hash_md5_calculado = calcular_hash_md5(frase)
-
-            print( '\n' +frase + " hash256= " + hash_sha256_calculado + '\n')
             
             hash_sha256_csv = linha[1]
             hash_md5_csv = linha[2]
+
+            print( '\n' +frase + " hash256= " + hash_sha256_calculado + " hcsv = " + hash_sha256_csv + '\n')
             
             # Verifica se os hashes calculados correspondem aos hashes do arquivo
             resultado_sha256 = "OK" if hash_sha256_calculado == hash_sha256_csv else "Erro"
